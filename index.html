@@ -8,7 +8,10 @@
   <title>Cosméticos HG | Belleza que habla de ti</title>
   <link rel="icon" href="assets/images/logo-cosmeticos-hg.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <script src="data.js" defer></script>
   <script src="script.js" defer></script>
+  <script src="admin.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -29,20 +32,11 @@
       <div class="hero-marquee" aria-hidden="true"><span>BELLEZA</span><i>✦</i><span>CUIDADO</span><i>✦</i><span>COLOR</span><i>✦</i><span>CONFIANZA</span></div>
     </section>
 
-    <section class="section categories" id="categorias" aria-labelledby="categories-title"><div class="container"><div class="section-heading reveal"><div><p class="eyebrow">Explora a tu manera</p><h2 id="categories-title">Encuentra lo que buscas</h2></div><p>Opciones para cada rutina, estilo y momento.</p></div><div class="category-grid">
-      <a class="category-card cat-nails reveal" href="#productos" data-category-link="uñas"><span class="category-number">01</span><div class="nail-art" aria-hidden="true"><i></i><i></i><i></i></div><div class="category-copy"><h3>Uñas</h3><p>Color, acabado y creatividad</p><span>↗</span></div></a>
-      <a class="category-card cat-makeup reveal delay-1" href="#productos" data-category-link="maquillaje"><span class="category-number">02</span><div class="makeup-art" aria-hidden="true"><i></i><b></b></div><div class="category-copy"><h3>Maquillaje</h3><p>Realza lo que te hace única</p><span>↗</span></div></a>
-      <a class="category-card cat-care reveal delay-2" href="#productos" data-category-link="cuidado"><span class="category-number">03</span><div class="care-art" aria-hidden="true"><i>HG</i></div><div class="category-copy"><h3>Cuidado personal</h3><p>Bienestar para todos los días</p><span>↗</span></div></a>
-    </div></div></section>
+    <section class="section categories" id="categorias" aria-labelledby="categories-title"><div class="container"><div class="section-heading reveal"><div><p class="eyebrow">Explora a tu manera</p><h2 id="categories-title">Encuentra lo que buscas</h2></div><p>Opciones para cada rutina, estilo y momento.</p></div><div class="category-grid" aria-live="polite"></div><p class="category-empty" hidden>No hay categorías disponibles por el momento.</p></div></section>
 
     <section class="section products-section" id="productos" aria-labelledby="products-title"><div class="container"><div class="section-heading reveal"><div><p class="eyebrow">Selección del momento</p><h2 id="products-title">Descubre tus favoritos</h2></div><p>Referencias conceptuales. Consulta marcas, tonos y disponibilidad.</p></div>
       <div class="product-toolbar reveal"><div class="filters" role="group" aria-label="Filtrar por categoría"><button class="filter is-active" data-filter="todos" aria-pressed="true">Todos</button><button class="filter" data-filter="uñas" aria-pressed="false">Uñas</button><button class="filter" data-filter="maquillaje" aria-pressed="false">Maquillaje</button><button class="filter" data-filter="cuidado" aria-pressed="false">Cuidado</button></div><label class="search-box"><span class="sr-only">Buscar productos</span><input id="product-search" type="search" placeholder="Buscar en el catálogo"><span aria-hidden="true">⌕</span></label></div>
-      <div class="product-grid" aria-live="polite">
-        <article class="product-card reveal" data-category="uñas" data-name="esmaltes esenciales color uñas"><div class="product-visual visual-wine"><span class="badge">Más vendido</span><div class="mini-polish"><i></i><b>HG</b></div></div><div class="product-info"><p>Uñas · Color</p><h3>Esmaltes esenciales</h3><span>Acabados y tonos para expresar tu estilo.</span><button class="product-link" data-interest="Esmaltes esenciales">Consultar producto <b>→</b></button></div></article>
-        <article class="product-card reveal delay-1" data-category="maquillaje" data-name="labiales de impacto maquillaje labios"><div class="product-visual visual-rose"><span class="badge">Novedad</span><div class="mini-lipstick"><i></i><b>HG</b></div></div><div class="product-info"><p>Maquillaje · Labios</p><h3>Labiales de impacto</h3><span>Color que acompaña tu ritmo y personalidad.</span><button class="product-link" data-interest="Labiales de impacto">Consultar producto <b>→</b></button></div></article>
-        <article class="product-card reveal delay-2" data-category="cuidado" data-name="ritual hidratación cuidado personal piel crema"><div class="product-visual visual-cream"><span class="badge">Recomendado</span><div class="mini-jar"><i>HG</i></div></div><div class="product-info"><p>Cuidado · Hidratación</p><h3>Ritual de hidratación</h3><span>Texturas pensadas para el cuidado cotidiano.</span><button class="product-link" data-interest="Ritual de hidratación">Consultar producto <b>→</b></button></div></article>
-        <article class="product-card reveal" data-category="uñas" data-name="brillo que perdura uñas top coat"><div class="product-visual visual-gold"><div class="mini-polish polish-gold"><i></i><b>HG</b></div></div><div class="product-info"><p>Uñas · Acabado</p><h3>Brillo que perdura</h3><span>El toque final para una apariencia impecable.</span><button class="product-link" data-interest="Brillo que perdura">Consultar producto <b>→</b></button></div></article>
-      </div><p class="empty-state" hidden>No encontramos coincidencias. Prueba otra palabra o categoría.</p>
+      <div class="product-grid" aria-live="polite"></div><p class="empty-state" hidden>No encontramos coincidencias. Prueba otra palabra o categoría.</p>
     </div></section>
 
     <section class="promo" aria-labelledby="promo-title"><div class="container promo-grid"><div class="promo-mark reveal" aria-hidden="true"><span>HG</span><i>✦</i></div><div class="promo-copy reveal delay-1"><p class="eyebrow">Recomendación personalizada</p><h2 id="promo-title">¿No sabes cuál elegir?</h2><p>Cuéntanos qué buscas, qué te gusta o qué necesitas. Te orientamos con opciones que se ajusten a ti, sin complicaciones.</p><a class="button button-light" href="#contacto">Quiero una recomendación <span>→</span></a></div></div></section>
@@ -55,5 +49,6 @@
   </main>
 
   <footer class="site-footer"><div class="container footer-top"><a class="brand" href="#inicio"><img src="assets/images/logo-cosmeticos-hg.jpg" alt="" width="52" height="52"><span>Cosméticos <strong>HG</strong></span></a><p>Belleza, cuidado y atención<br>pensados para ti.</p><a class="back-top" href="#inicio">Volver arriba ↑</a></div><div class="container footer-bottom"><span>© 2026 Cosméticos HG</span><span>Catálogo informativo · Pedidos por WhatsApp</span></div></footer>
+  <div id="admin-root"></div>
 </body>
 </html>
