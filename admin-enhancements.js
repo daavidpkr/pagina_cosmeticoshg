@@ -148,6 +148,11 @@
   enhanceShell();
 })();
 const adminCommerce = document.createElement("script");
-adminCommerce.src = "admin-commerce.js";
+adminCommerce.src = "admin-commerce.js?v=7";
 adminCommerce.defer = true;
+adminCommerce.onload = () => {
+  const editorial = document.createElement("script");
+  editorial.src = "admin-editorial.js?v=7";
+  document.head.append(editorial);
+};
 document.head.append(adminCommerce);

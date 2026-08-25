@@ -171,6 +171,13 @@
       renderSection();
     }
   }
+  function replaceAdminSection(id, label, render) {
+    if (!ADMIN_SECTIONS[id] || typeof render !== "function")
+      throw new Error(`No se puede reemplazar la sección administrativa: ${id}`);
+    ADMIN_SECTIONS[id] = { label, render };
+    syncAdminMenu();
+    if (section === id && root.querySelector("#admin-content")) renderSection();
+  }
   function verifyAdminNavigation() {
     const errors = [],
       ids = Object.keys(ADMIN_SECTIONS);
@@ -620,6 +627,7 @@
   registerAdminSection("respaldo", "Respaldo", renderBackup);
   window.HGAdmin = {
     registerSection: registerAdminSection,
+    replaceSection: replaceAdminSection,
     selectSection: selectAdminSection,
     verifyNavigation: verifyAdminNavigation,
     get currentSection() {
